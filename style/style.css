@@ -1,0 +1,23 @@
+.video-detail .details {
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.list-group-item {
+	cursor: pointer;
+	cursor: 
+}
+
+.list-group-item  {
+	background-color: #e1eaea ; 
+}
+
+.information-item {
+	background-color: #e6e6e6; 
+	color: #002db3 ; 
+	padding: 100px;
+	margin-right: 0px;
+	margin-left: 100px;
+}
