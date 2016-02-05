@@ -1,18 +1,17 @@
 import React from 'react';
 import { Component } from 'react';
 
-import TodoList from '../containers/todo_list'
-import AddTodoBar from '../containers/add_todo_bar';
-import FilterTodo from '../containers/filter_todos';
+import BookList from '../containers/book_list';
+import BookDetail from '../containers/book_detail';
+import BookFilter from '../containers/book_filter';
+
 
 export default class App extends Component {
-	
   render() {
     return (
       <div>
-      	<AddTodoBar />
-        <TodoList />
-        <FilterTodo />
+      	<BookList />
+      	<BookFilter />
       </div>
     );
   }

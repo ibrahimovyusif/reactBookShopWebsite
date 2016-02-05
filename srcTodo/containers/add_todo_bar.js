@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 
 class AddTodo extends Component {
 	render() {
-
+		
 		return (
 			<ul>
 				<div className="addTodo-bar">
@@ -32,7 +32,7 @@ class AddTodo extends Component {
 
 function mapStateToProps(state) {
 	return {
-		
+		state: state
 	}
 }
 

@@ -15,9 +15,35 @@
 }
 
 .information-item {
-	background-color: #e6e6e6; 
-	color: #002db3 ; 
+	background-color: rgba(235, 241, 248, 0.61);
+	color: #000000 ; 
 	padding: 100px;
 	margin-right: 0px;
-	margin-left: 100px;
+	margin-left: 0px;
 }
+
+.list-group-item {
+  color: red;
+    letter-spacing: 1px;
+  text-decoration: none;
+  background: none;
+    border-radius: 0;
+    cursor: pointer;
+    margin-bottom: 0;
+    vertical-align: middle;
+  font-size:14px;
+  line-height:20px;
+  font-weight:700;
+  text-transform:uppercase;
+  padding:8px 20px;
+}
+
+.button-group-item:hover {
+  color: black;
+}
+
+.list-group-item {
+    width: 87% !important;
+    text-align: center !important;
+}
+

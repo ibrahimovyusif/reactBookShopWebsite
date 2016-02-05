@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { toggleTodo } from '../actions/index';
-
+import  getFilteredTodoList  from '../reducers/reducer_filter_todos';
 
 class TodoList extends Component {
+
 	renderList(){
-		return this.props.todos.todos.map((todo) => {
+		const filteredTodos = getFilteredTodoList(this.props.todos, this.props.visibilityFilter) ;
+		return filteredTodos.map((todo) => {
 			if(todo.completed){
 
 				return (
@@ -19,7 +21,7 @@ class TodoList extends Component {
 						 </li>
 				);
 
-			}else{
+			} else{
 
 				return (
 						<li 
@@ -49,9 +51,9 @@ class TodoList extends Component {
 }
 
 function mapStateToProps(state){
-	// whatever is returned will show up as props inside of Booklist
 	return {
-		todos: state.todos
+		todos: state.todos,
+		visibilityFilter: state.visibilityFilter
 	}
 }
 
