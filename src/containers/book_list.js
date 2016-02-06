@@ -4,8 +4,9 @@ import {selectBook } from '../actions/index';
 import { bindActionCreators } from 'redux';
 import { ReactRouter, Router, Route, Link, hashHistory } from 'react-router';
 
+const BOOK_TITLE_LENGTH = 26;
 
-
+let stndrdzdBookTitle, stndrdzdAuthorName;
 
 class BookList extends Component {
 	
@@ -14,22 +15,31 @@ class BookList extends Component {
 			if(book.category === this.props.activeCategory.name ||
 				this.props.activeCategory.name == 'all'){
 
+
+				if(book.title.length > BOOK_TITLE_LENGTH) {
+					stndrdzdBookTitle = book.title.slice(0,23) + "...";
+				} 
+				else {
+					stndrdzdBookTitle = book.title;
+				}
+				if(book.author.length > BOOK_TITLE_LENGTH) {
+					stndrdzdAuthorName = book.author.slice(0,23) + "...";
+				} 
+				else {
+					stndrdzdAuthorName = book.author;
+				}
 				return (
-			        <div key = {book.title} className="col-lg-4">
-			          <h4>{book.title} </h4>
+
+			        <div key = {book.title} className="col-lg-2">
 						  	<li className="list-group-item"
 								key = {book.title}>
 							
 								<Link to={`/details/${book.id}`}>
-									<img src={book.imgSrc} height="150px" alt="..." className="img-rounded"/>
+									<img src={book.imgSrc} height="150px" width="120px" className="smallBookImages" alt="..." />
 								</Link>
 							</li>
-
-			            	<p>{book.details}</p>
-						
-						<Link to={`/details/${book.id}`}>
-			          		<p className="btn btn-primary" role="button">View details &raquo;</p>
-						</Link>
+			          <h6> <b>Title:</b> {stndrdzdBookTitle} </h6>
+			          <h6> <b>Author:</b> {stndrdzdAuthorName} </h6>
 
 			        </div>
 				);
@@ -50,7 +60,6 @@ class BookList extends Component {
 }
 
 function mapStateToProps(state){
-	console.log('this.state.', state);
 	// whatever is returned will show up as props inside of Booklist
 	return {
 		books: state.books,

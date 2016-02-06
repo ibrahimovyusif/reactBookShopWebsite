@@ -7,7 +7,6 @@ export function selectBook(book) {
 }
 
 export function filterBook(category) {
-	console.log('--0-0- ', category)
 	// / selectcategory is an action creator,should return action object with ttype property
 	return {
 		type: 'CATEGORY_SELECTED',

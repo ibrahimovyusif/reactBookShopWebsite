@@ -7,7 +7,6 @@ import ActiveCategory from './reducer_active_category'
 
 const rootReducer = combineReducers({
 	books: BookReducer,
-	activeBook: ActiveBook,
 	categories: CategoryReducer,
 	activeCategory: ActiveCategory
 });

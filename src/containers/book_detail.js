@@ -6,14 +6,12 @@ import _ from 'lodash';
 
 export default class BookDetail extends Component {
 	render() {
-		console.log('11111 ', this.props.bookId)
 			let selectedBookId = this.props.bookId;
 			let bookList = this.props.book;
 			let selectedBook = _.filter(bookList, function(item) {
 				window.scrollTo(0, 0);
 				if(item.id === parseInt(selectedBookId)) return item
 			});
-			console.log(selectedBook);
 
 		return (
 			
@@ -30,7 +28,6 @@ export default class BookDetail extends Component {
 }
 
 function mapStateToProps(state) {
-	console.log('aaa', state)
 	return {
 		book: state.books
 	}
