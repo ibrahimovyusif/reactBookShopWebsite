@@ -46,7 +46,7 @@ border-color: #22364C;
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #2B4767;
+    background-color: #fff;
     border-right: 1px solid #eee;
   }
 }
@@ -162,7 +162,7 @@ border-color: #22364C;
 }
 
 .header {
-  color: #2B4767;
+  color: #F1F1F1;
   padding: 10px;
   border-bottom: 2px dashed #DADADA;
 }

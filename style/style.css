@@ -5,13 +5,8 @@
 	border-radius: 4px;
 }
 
-.list-group-item {
-	cursor: pointer;
-	cursor: 
-}
 
 .list-group-item  {
-	background-color: #e1eaea ; 
 }
 
 .information-item {
@@ -26,7 +21,6 @@
   color: red;
     letter-spacing: 1px;
   text-decoration: none;
-  background: none;
     border-radius: 0;
     cursor: pointer;
     margin-bottom: 0;
@@ -37,17 +31,29 @@
   text-transform:uppercase;
   padding:8px 20px;
 }
+.list-group-item:hover {
+  background-color:rgba(81,191,190,0.56); 
+}
+
+
 
 .button-group-item:hover {
   color: black;
 }
 
-.list-group-item {
+/*.list-group-item {
     width: 87% !important;
     text-align: center !important;
+}*/
+
+
+.filter-group-item {
+  color:black;
+  text-align: center;
+  font-size: 110%;
 }
 
-
-.smallBookImages {
-
+.filter-group-item:hover {
+  color: rgba(0,173,171,0.56);
+  font-weight: bold;
 }

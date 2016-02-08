@@ -11,13 +11,15 @@ class BookFilter extends Component {
 		return this.props.categories.map((category) => {
 
 			return (
-				<button 
-					className="list-group-item"
+				<div 
+					className="filter-group-item"
 					key = {category.name} 
 					onClick = {() => this.props.filterBook(category)}
 				>
-				    {category.name} 
-				</button>
+					<Link className="filter-group-item" to={`/`}>
+				    	{category.name}
+					</Link>
+				</div>
 			);
 		});
 	}
@@ -32,10 +34,9 @@ class BookFilter extends Component {
 
 					<ul className ="nav nav-pills">
 
-						<Link to={`/`}>
+						
 						{this.renderList()}
 
-						</Link>
 						
 					</ul>
 

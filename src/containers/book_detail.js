@@ -17,10 +17,11 @@ export default class BookDetail extends Component {
 			
 			<ul className="information-item">
 				<div>
-					<h3> Title: {selectedBook[0].title} </h3>
+					<h3> {selectedBook[0].title} </h3>
 					<img src={selectedBook[0].imgSrc} height="300px" alt="..." className="img-rounded"/>
-					<div> <h4>Pages:</h4> {selectedBook[0].pages} </div>
-					<h4>Info:</h4> <p> {selectedBook[0].details}</p>
+					<div> <h4><b>Author:</b></h4> {selectedBook[0].author} </div>
+					<div> <h4><b>Pages:</b></h4> {selectedBook[0].pages} </div>
+					<h4><b>Info:</b></h4> <p> {selectedBook[0].details}</p>
 				</div>
 			</ul>
 		);
